@@ -1,0 +1,243 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "8cbf2175-8c73-4ce7-a1b6-9f1c757418b8")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 62.23 106.045)
+		(size 34.925 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "2581acb7-abf9-4f6d-9126-9e394a55ab2d")
+		(property "Sheetname" "Section C - Throtle"
+			(at 62.23 105.3334 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Section C - Throtle.kicad_sch"
+			(at 62.23 116.7896 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 62.865 85.09)
+		(size 34.29 12.065)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "2b6d34ad-9d7a-4f29-bcfb-11e28d3b2081")
+		(property "Sheetname" "Section B - MCU"
+			(at 62.865 84.3784 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Section B - MCU_sch.kicad_sch"
+			(at 62.865 97.7396 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 62.23 66.04)
+		(size 34.925 12.065)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "4dd74dca-1a0e-4a69-be0c-6e0544fab938")
+		(property "Sheetname" "Section A - Power"
+			(at 62.23 65.3284 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Section A - Power.kicad_sch"
+			(at 62.23 78.6896 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 62.23 123.19)
+		(size 36.195 12.065)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "b143307d-08da-4bba-b86c-992dd1aecb7c")
+		(property "Sheetname" "Section D - Input"
+			(at 62.23 122.4784 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Section D - Input.kicad_sch"
+			(at 62.23 135.8396 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 61.595 142.875)
+		(size 12.7 3.81)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "c400f111-7d7e-4d8a-9fbe-f29b0eec18a8")
+		(property "Sheetname" "Section E - Analog Input"
+			(at 61.595 142.1634 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Section E - Analog Input.kicad_sch"
+			(at 61.595 147.2696 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "2")
+		)
+	)
+)
