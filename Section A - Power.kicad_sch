@@ -5,7 +5,7 @@
 	(uuid "ac214524-3b48-4475-9c22-f2c3e5833031")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Connector:Screw_Terminal_01x02"
+		(symbol "Connector:Conn_01x02_Socket"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -25,7 +25,7 @@
 					)
 				)
 			)
-			(property "Value" "Screw_Terminal_01x02"
+			(property "Value" "Conn_01x02_Socket"
 				(at 0 -5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -57,7 +57,7 @@
 					)
 				)
 			)
-			(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Generic connector, single row, 01x02, script generated"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -68,7 +68,17 @@
 					)
 				)
 			)
-			(property "ki_keywords" "screw terminal"
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -79,7 +89,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "TerminalBlock*:*"
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -90,21 +100,10 @@
 					)
 				)
 			)
-			(symbol "Screw_Terminal_01x02_1_1"
-				(rectangle
-					(start -1.27 1.27)
-					(end 1.27 -3.81)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
+			(symbol "Conn_01x02_Socket_1_1"
 				(polyline
 					(pts
-						(xy -0.5334 0.3302) (xy 0.3302 -0.508)
+						(xy -1.27 0) (xy -0.508 0)
 					)
 					(stroke
 						(width 0.1524)
@@ -116,7 +115,7 @@
 				)
 				(polyline
 					(pts
-						(xy -0.5334 -2.2098) (xy 0.3302 -3.048)
+						(xy -1.27 -2.54) (xy -0.508 -2.54)
 					)
 					(stroke
 						(width 0.1524)
@@ -126,10 +125,10 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy -0.3556 0.508) (xy 0.508 -0.3302)
-					)
+				(arc
+					(start 0 -0.508)
+					(mid -0.5058 0)
+					(end 0 0.508)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -138,32 +137,10 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy -0.3556 -2.032) (xy 0.508 -2.8702)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 0)
-					(radius 0.635)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 -2.54)
-					(radius 0.635)
+				(arc
+					(start 0 -3.048)
+					(mid -0.5058 -2.54)
+					(end 0 -2.032)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -366,13 +343,12 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:C_Polarized_US"
+		(symbol "Device:C_Polarized"
 			(pin_numbers
 				(hide yes)
 			)
 			(pin_names
 				(offset 0.254)
-				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -390,7 +366,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "C_Polarized_US"
+			(property "Value" "C_Polarized"
 				(at 0.635 -2.54 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -402,7 +378,7 @@
 				)
 			)
 			(property "Footprint" ""
-				(at 0 0 0)
+				(at 0.9652 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -423,7 +399,7 @@
 					)
 				)
 			)
-			(property "Description" "Polarized capacitor, US symbol"
+			(property "Description" "Polarized capacitor"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -456,13 +432,12 @@
 					)
 				)
 			)
-			(symbol "C_Polarized_US_0_1"
-				(polyline
-					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
-					)
+			(symbol "C_Polarized_0_1"
+				(rectangle
+					(start -2.286 0.508)
+					(end 2.286 1.016)
 					(stroke
-						(width 0.508)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -483,7 +458,7 @@
 				)
 				(polyline
 					(pts
-						(xy -1.27 1.778) (xy -1.27 2.794)
+						(xy -1.27 2.794) (xy -1.27 1.778)
 					)
 					(stroke
 						(width 0)
@@ -493,20 +468,19 @@
 						(type none)
 					)
 				)
-				(arc
-					(start -2.032 -1.27)
-					(mid 0 -0.5572)
-					(end 2.032 -1.27)
+				(rectangle
+					(start 2.286 -0.508)
+					(end -2.286 -1.016)
 					(stroke
-						(width 0.508)
+						(width 0)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type outline)
 					)
 				)
 			)
-			(symbol "C_Polarized_US_1_1"
+			(symbol "C_Polarized_1_1"
 				(pin passive line
 					(at 0 3.81 270)
 					(length 2.794)
@@ -527,8 +501,340 @@
 				)
 				(pin passive line
 					(at 0 -3.81 90)
-					(length 3.302)
+					(length 2.794)
 					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:D_Schottky"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Schottky"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Schottky diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "diode Schottky"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "D_Schottky_0_1"
+				(polyline
+					(pts
+						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_Schottky_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:D_TVS"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_TVS"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Bidirectional transient-voltage-suppression diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "diode TVS thyrector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "D_TVS_0_1"
+				(polyline
+					(pts
+						(xy -2.54 1.27) (xy -2.54 -1.27) (xy 2.54 1.27) (xy 2.54 -1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 1.27) (xy 0 1.27) (xy 0 -1.27) (xy -0.508 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_TVS_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1029,7 +1335,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Diode:SMAJ16A"
+		(symbol "PCM_SparkFun-LED:LED_Blue_0603"
 			(pin_numbers
 				(hide yes)
 			)
@@ -1052,7 +1358,7 @@
 					)
 				)
 			)
-			(property "Value" "SMAJ16A"
+			(property "Value" "Blue"
 				(at 0 -2.54 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1062,7 +1368,7 @@
 					)
 				)
 			)
-			(property "Footprint" "Diode_SMD:D_SMA"
+			(property "Footprint" "PCM_SparkFun-LED:LED_0603_1608Metric_Blue"
 				(at 0 -5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1073,8 +1379,8 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=75e32973-b177-4ee3-a0ff-cedaf1abdb93&filename=smaj-datasheet"
-				(at -1.27 0 0)
+			(property "Datasheet" "https://media.digikey.com/pdf/Data%20Sheets/Rohm%20PDFs/SMLE12_Series_Rev2.0_2007.pdf"
+				(at 0 -10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1084,7 +1390,29 @@
 					)
 				)
 			)
-			(property "Description" "400W unidirectional Transient Voltage Suppressor, 16.0Vr, SMA(DO-214AC)"
+			(property "Description" "Light emitting diode"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "PROD_ID" "DIO-08575"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "SparkFun LED diode"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1095,7 +1423,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "unidirectional diode TVS voltage suppressor"
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1106,21 +1434,10 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "D*SMA*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "SMAJ16A_0_1"
+			(symbol "LED_Blue_0603_0_1"
 				(polyline
 					(pts
-						(xy -0.762 1.27) (xy -1.27 1.27) (xy -1.27 -1.27)
+						(xy -0.762 -1.016) (xy -0.762 1.016)
 					)
 					(stroke
 						(width 0.254)
@@ -1132,149 +1449,31 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+						(xy 0 0.762) (xy -0.508 1.27) (xy -0.254 1.27) (xy -0.508 1.27) (xy -0.508 1.016)
 					)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
 						(type none)
 					)
 				)
-			)
-			(symbol "SMAJ16A_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "A1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Diode:SS36"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SS36"
-				(at 0 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Diode_SMD:D_SMA"
-				(at 0 -4.445 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.vishay.com/docs/88751/ss32.pdf"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "60V 3A Schottky Diode, SMA"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "diode Schottky"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "D*SMA*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "SS36_0_1"
 				(polyline
 					(pts
-						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+						(xy 0.508 1.27) (xy 0 1.778) (xy 0.254 1.778) (xy 0 1.778) (xy 0 1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.016) (xy -0.762 0) (xy 0.762 1.016) (xy 0.762 -1.016)
 					)
 					(stroke
 						(width 0.254)
@@ -1286,19 +1485,7 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 0)
+						(xy 1.016 0) (xy -0.762 0)
 					)
 					(stroke
 						(width 0)
@@ -1309,10 +1496,10 @@
 					)
 				)
 			)
-			(symbol "SS36_1_1"
+			(symbol "LED_Blue_0603_1_1"
 				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
+					(at -2.54 0 0)
+					(length 1.778)
 					(name "K"
 						(effects
 							(font
@@ -1329,8 +1516,8 @@
 					)
 				)
 				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
+					(at 2.54 0 180)
+					(length 1.778)
 					(name "A"
 						(effects
 							(font
@@ -1349,7 +1536,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Regulator_Linear:LM1117MP-3.3"
+		(symbol "Regulator_Linear:AMS1117-3.3"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1365,7 +1552,7 @@
 					)
 				)
 			)
-			(property "Value" "LM1117MP-3.3"
+			(property "Value" "AMS1117-3.3"
 				(at 0 3.175 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1377,7 +1564,7 @@
 				)
 			)
 			(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
-				(at 0 0 0)
+				(at 0 5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1387,8 +1574,8 @@
 					)
 				)
 			)
-			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm1117.pdf"
-				(at 0 0 0)
+			(property "Datasheet" "http://www.advanced-monolithic.com/pdf/ds1117.pdf"
+				(at 2.54 -6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1398,7 +1585,7 @@
 					)
 				)
 			)
-			(property "Description" "800mA Low-Dropout Linear Regulator, 3.3V fixed output, SOT-223"
+			(property "Description" "1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1420,7 +1607,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "SOT?223*"
+			(property "ki_fp_filters" "SOT?223*TabPin2*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1431,7 +1618,7 @@
 					)
 				)
 			)
-			(symbol "LM1117MP-3.3_0_1"
+			(symbol "AMS1117-3.3_0_1"
 				(rectangle
 					(start -5.08 -5.08)
 					(end 5.08 1.905)
@@ -1444,7 +1631,7 @@
 					)
 				)
 			)
-			(symbol "LM1117MP-3.3_1_1"
+			(symbol "AMS1117-3.3_1_1"
 				(pin power_in line
 					(at 0 -7.62 90)
 					(length 2.54)
@@ -1502,55 +1689,48 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Regulator_Switching:XL1509-5.0"
+		(symbol "Regulator_Switching:LM2596S-5"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U"
-				(at -7.112 6.096 0)
+				(at -10.16 6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "XL1509-5.0"
-				(at 5.842 6.096 0)
+			(property "Value" "LM2596S-5"
+				(at 0 6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-				(at 0 8.382 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1809050422_XLSEMI-XL1509-5-0E1_C61063.pdf"
-				(at 2.54 10.668 0)
+			(property "Footprint" "Package_TO_SOT_SMD:TO-263-5_TabPin3"
+				(at 1.27 -6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
+						(italic yes)
 					)
+					(justify left)
 				)
 			)
-			(property "Description" "Buck DC/DC Converter, 2A, 5V Output Voltage, 7-40V Input Voltage"
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2596.pdf"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1561,7 +1741,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "Buck DC/DC Converter"
+			(property "Description" "5V 3A Step-Down Voltage Regulator, TO-263"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1572,7 +1752,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm*"
+			(property "ki_keywords" "Step-Down Voltage Regulator 5V 3A"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1583,10 +1763,21 @@
 					)
 				)
 			)
-			(symbol "XL1509-5.0_0_1"
+			(property "ki_fp_filters" "TO?263*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "LM2596S-5_0_1"
 				(rectangle
-					(start -7.62 5.08)
-					(end 7.62 -5.08)
+					(start -10.16 5.08)
+					(end 10.16 -5.08)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -1596,9 +1787,9 @@
 					)
 				)
 			)
-			(symbol "XL1509-5.0_1_1"
+			(symbol "LM2596S-5_1_1"
 				(pin power_in line
-					(at -10.16 2.54 0)
+					(at -12.7 2.54 0)
 					(length 2.54)
 					(name "VIN"
 						(effects
@@ -1615,8 +1806,8 @@
 						)
 					)
 				)
-				(pin power_out line
-					(at 10.16 2.54 180)
+				(pin output line
+					(at 12.7 -2.54 180)
 					(length 2.54)
 					(name "OUT"
 						(effects
@@ -1626,42 +1817,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 10.16 -2.54 180)
-					(length 2.54)
-					(name "FB"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 -2.54 0)
-					(length 2.54)
-					(name "~{EN}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1679,64 +1834,43 @@
 							)
 						)
 					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 12.7 2.54 180)
+					(length 2.54)
+					(name "FB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 -2.54 0)
+					(length 2.54)
+					(name "~{ON}/OFF"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
 					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(hide yes)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(hide yes)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(hide yes)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2206,6 +2340,145 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:+12V"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "+12V"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+12V\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+12V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+12V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+3.3V"
 			(power global)
 			(pin_numbers
@@ -2600,1534 +2873,753 @@
 			(embedded_fonts no)
 		)
 	)
-	(junction
-		(at 238.76 33.02)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "01d0062f-55df-4104-ae8f-78845463a4ec")
+	(rectangle
+		(start 196.85 62.23)
+		(end 209.55 69.215)
+		(stroke
+			(width 0)
+			(type dot)
+			(color 255 0 0 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "61110326-8a19-4b0d-bc53-f65434437ba4")
 	)
-	(junction
-		(at 170.18 90.17)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "16ec8add-e926-4caf-90bd-163f59cd5ab5")
-	)
-	(junction
-		(at 177.8 45.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "19c32348-920a-44f8-a963-e6558cf1cd62")
-	)
-	(junction
-		(at 219.71 45.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2059866c-d1f1-4a33-b2c0-7c8ee85e665f")
-	)
-	(junction
-		(at 190.5 45.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "25ad300e-797b-4e5e-a94f-4ef40634b292")
+	(rectangle
+		(start 133.985 53.34)
+		(end 147.955 58.42)
+		(stroke
+			(width 0)
+			(type dot)
+			(color 255 0 0 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "f7228c5b-4d2e-40be-967a-c9ce75a6fe82")
 	)
 	(junction
-		(at 219.71 33.02)
+		(at 168.91 71.12)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "4b79de8c-3949-40d1-9edb-4cde810a9382")
+		(uuid "05a9525d-3c16-4539-a4c2-ebd0fc573ae1")
 	)
 	(junction
-		(at 191.77 77.47)
+		(at 200.66 60.96)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "76f37bd4-a3dc-4f0c-8429-b0682f5f1eb3")
+		(uuid "0aeb21ec-a6c9-48c5-8173-832b72eec946")
 	)
 	(junction
-		(at 167.64 45.72)
+		(at 200.66 71.12)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "a3775b3e-0212-4113-8e4c-2476e1d5ac1a")
+		(uuid "1f73879d-7738-4df2-a7f1-8242df687949")
 	)
 	(junction
-		(at 93.98 35.56)
+		(at 161.29 55.88)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "a3dd1046-af65-4f0b-b806-414c905f4577")
+		(uuid "3c2699d4-0f1c-49e6-a054-f98cd2bbd14b")
 	)
 	(junction
-		(at 93.98 57.15)
+		(at 184.15 71.12)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "a71f411a-a3ab-4443-b572-2a49379a6fa0")
+		(uuid "411ddd69-478f-427e-8afe-5dad9b187ee7")
 	)
 	(junction
-		(at 181.61 77.47)
+		(at 175.26 110.49)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "aab3c206-1cc1-4d6e-86bf-aad0b7979b9e")
+		(uuid "55712fc0-afeb-4fd4-844d-fcdfd1fd6c2a")
 	)
 	(junction
-		(at 181.61 90.17)
+		(at 240.03 55.88)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "b64724d9-b633-452b-90b6-86eaf48e49d4")
+		(uuid "62b4cbbb-d228-4b5a-ac0a-e5118fc1fd12")
 	)
 	(junction
-		(at 93.98 46.99)
+		(at 214.63 71.12)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "c4077a9f-d867-4d1e-a811-dd72be6353f2")
+		(uuid "632aedcf-3ec4-4c62-907d-d33395fe0e4d")
 	)
 	(junction
-		(at 146.05 77.47)
+		(at 143.51 102.87)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "dbf8b34f-d252-4fb0-a0b7-a53d635fc06e")
+		(uuid "772d349b-d7ae-4c53-92b3-d2ee7877cce2")
 	)
 	(junction
-		(at 264.16 33.02)
+		(at 187.96 110.49)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f694bbf7-050d-419c-9a6f-de412ab6f4fe")
+		(uuid "8c696a30-6af3-40da-8971-e369eb9b7640")
 	)
 	(junction
-		(at 167.64 33.02)
+		(at 161.29 71.12)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f95dd24c-b1ad-4a61-afd4-4722beef9359")
+		(uuid "8c98451b-6d35-4f9a-a67f-81b632121af4")
+	)
+	(junction
+		(at 214.63 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9d693c3f-8b1d-45d4-a565-6679ef4e2393")
+	)
+	(junction
+		(at 100.33 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9ff408d9-3daa-4f78-a897-07a512192651")
+	)
+	(junction
+		(at 187.96 102.87)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a6d12ecf-b761-493d-b62f-89b65d5a459e")
+	)
+	(junction
+		(at 214.63 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b63ac458-3e63-42b5-8eda-d8de31161731")
+	)
+	(junction
+		(at 227.33 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cc34fee9-bb51-4ce0-b2b6-6dbdaa62a164")
+	)
+	(junction
+		(at 200.66 102.87)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d0f1fd63-bb4a-435f-b9f3-402107d0db04")
+	)
+	(junction
+		(at 148.59 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d664a8fa-e07d-4267-ac74-adf94c863c72")
+	)
+	(junction
+		(at 156.21 102.87)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d6a5c890-eb68-49b5-81c1-6a0904c14b5b")
+	)
+	(junction
+		(at 100.33 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d848ae7e-e5be-49c8-a0cb-4162d5169728")
+	)
+	(junction
+		(at 156.21 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "df399add-35ac-4ecd-92c7-c1d9d2cefa88")
+	)
+	(junction
+		(at 100.33 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e4be490a-52a0-4864-b030-6306bff97a0f")
+	)
+	(junction
+		(at 227.33 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eabaee6f-f8e4-4d20-b20a-c6b95b8fec42")
 	)
 	(wire
 		(pts
-			(xy 181.61 77.47) (xy 191.77 77.47)
+			(xy 184.15 72.39) (xy 184.15 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0a9d4563-7cc6-47b6-9d02-044ffab0dc33")
+		(uuid "080ac31a-503d-4a43-b73c-8c703d8a7feb")
 	)
 	(wire
 		(pts
-			(xy 219.71 45.72) (xy 190.5 45.72)
+			(xy 148.59 71.12) (xy 161.29 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0d7beae4-4cbd-43f8-adec-3823fb31f693")
+		(uuid "0c1762cf-98ea-4a5c-a921-75707e1ecb9f")
 	)
 	(wire
 		(pts
-			(xy 146.05 77.47) (xy 146.05 76.2)
+			(xy 44.45 77.47) (xy 100.33 77.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1763328a-ef4d-4b97-a65a-808ed7fa7c59")
+		(uuid "1527690b-ca03-451f-85a2-1d59b3d4cd5d")
 	)
 	(wire
 		(pts
-			(xy 48.26 38.1) (xy 60.96 38.1)
+			(xy 156.21 110.49) (xy 175.26 110.49)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1c68d6b4-ab7e-409e-8ea9-7198338471de")
+		(uuid "1cf6536c-70ab-4f98-a436-a23257beeecf")
 	)
 	(wire
 		(pts
-			(xy 167.64 45.72) (xy 177.8 45.72)
+			(xy 143.51 102.87) (xy 156.21 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2666c541-40d4-4b61-b2db-aa38c0ce6875")
+		(uuid "1d326b03-54fc-4e77-ab5f-0338abb8f542")
 	)
 	(wire
 		(pts
-			(xy 219.71 43.18) (xy 219.71 45.72)
+			(xy 143.51 101.6) (xy 143.51 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2837c5ba-5d03-4496-92aa-c14dd7659145")
+		(uuid "1e65e0ee-c33d-44df-8b9e-7bfb99022fe8")
 	)
 	(wire
 		(pts
-			(xy 190.5 45.72) (xy 190.5 49.53)
+			(xy 93.98 55.88) (xy 100.33 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2d346727-5b5c-4341-b0de-6a6cbe1c665b")
+		(uuid "2027b236-55d6-49b0-aa7d-39198d7c7750")
 	)
 	(wire
 		(pts
-			(xy 181.61 77.47) (xy 181.61 78.74)
+			(xy 187.96 110.49) (xy 200.66 110.49)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2d5649b6-9e0b-46d8-93a8-f20cdfdaeb85")
+		(uuid "20e8574d-aec8-4b7c-8c49-70e2ad26fdf7")
 	)
 	(wire
 		(pts
-			(xy 200.66 38.1) (xy 205.74 38.1)
+			(xy 210.82 60.96) (xy 214.63 60.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "338f6b9c-6439-418e-9365-cd2f798839aa")
+		(uuid "22cc7ca9-2b49-4282-b8ac-afe511992d8d")
 	)
 	(wire
 		(pts
-			(xy 82.55 43.18) (xy 82.55 46.99)
+			(xy 214.63 69.85) (xy 214.63 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "33fc2fa5-e190-4f99-8546-8f50bb393c6d")
+		(uuid "271795b8-0f37-43b2-b75b-b053d9e8cc6d")
 	)
 	(wire
 		(pts
-			(xy 219.71 33.02) (xy 227.33 33.02)
+			(xy 100.33 81.28) (xy 100.33 77.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3823fd7b-feed-4898-9369-ac1d6d7b03eb")
+		(uuid "2ac54db2-34c4-4892-893d-aa1335d8064c")
 	)
 	(wire
 		(pts
-			(xy 177.8 45.72) (xy 190.5 45.72)
+			(xy 161.29 55.88) (xy 171.45 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "38340b69-ee06-4db1-aab5-9ff736acaaa6")
+		(uuid "2df79883-4770-4c5d-820c-9de331995d9b")
 	)
 	(wire
 		(pts
-			(xy 93.98 35.56) (xy 113.03 35.56)
+			(xy 88.9 66.04) (xy 100.33 66.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3d8ba5a8-2c14-4482-b984-5b77f6c44605")
+		(uuid "2e15c5ea-11fc-4420-a1c5-9489de1e177d")
 	)
 	(wire
 		(pts
-			(xy 162.56 77.47) (xy 146.05 77.47)
+			(xy 196.85 55.88) (xy 214.63 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3ffd87db-d637-4e2b-bad6-d7c8dc96583c")
+		(uuid "2f6366e1-9604-4de1-bfad-252ce7d9c773")
 	)
 	(wire
 		(pts
-			(xy 113.03 49.53) (xy 113.03 57.15)
+			(xy 240.03 55.88) (xy 240.03 57.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4130d24f-d548-4330-b71f-71abade4f11e")
+		(uuid "30aee96a-59db-4127-ab85-dd10753c89be")
 	)
 	(wire
 		(pts
-			(xy 146.05 41.91) (xy 146.05 45.72)
+			(xy 88.9 63.5) (xy 88.9 66.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "46e87619-5108-413e-a0f3-d0aa8dca2289")
+		(uuid "35db00eb-ff1d-4672-87a5-567887f0fbc5")
 	)
 	(wire
 		(pts
-			(xy 191.77 77.47) (xy 191.77 78.74)
+			(xy 46.99 55.88) (xy 59.69 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4a9b5969-2019-4c00-9d87-28db89ade220")
+		(uuid "36336ece-a2da-4cb0-a9a7-22d59348ff57")
 	)
 	(wire
 		(pts
-			(xy 177.8 77.47) (xy 181.61 77.47)
+			(xy 161.29 71.12) (xy 168.91 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5162e2c9-63ca-46c9-8dec-7563fc7dd755")
+		(uuid "37f1ab15-1ed3-41e1-b555-e3e5df30e862")
 	)
 	(wire
 		(pts
-			(xy 93.98 55.88) (xy 93.98 57.15)
+			(xy 182.88 102.87) (xy 187.96 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5b6fadda-97da-4af8-b452-30ff14aebc95")
+		(uuid "37f65cbb-305e-449c-b5b7-95209a19a411")
 	)
 	(wire
 		(pts
-			(xy 170.18 85.09) (xy 170.18 90.17)
+			(xy 227.33 71.12) (xy 214.63 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5c2f4ad3-8dfd-4590-a393-7c6dd24c7aa1")
+		(uuid "3a44b2fd-302d-4f01-a909-8e54f0c4caff")
 	)
 	(wire
 		(pts
-			(xy 93.98 45.72) (xy 93.98 46.99)
+			(xy 184.15 71.12) (xy 200.66 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "60499c2f-5eda-4726-8c3b-07c8d1c2065b")
+		(uuid "3b8d8849-7aad-4200-ab1b-418575c2b933")
 	)
 	(wire
 		(pts
-			(xy 146.05 77.47) (xy 146.05 78.74)
+			(xy 240.03 64.77) (xy 240.03 66.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "62377e2c-5bb6-4739-b295-bd9927fa35c1")
+		(uuid "49024258-7b4f-47a9-a32d-43e7e722cdb3")
 	)
 	(wire
 		(pts
-			(xy 60.96 57.15) (xy 113.03 57.15)
+			(xy 200.66 60.96) (xy 203.2 60.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "740d9b84-0a8a-4fcf-8f9e-17b316a44911")
+		(uuid "49ca89c6-55a4-4b2f-9a7b-2564b2b700e0")
 	)
 	(wire
 		(pts
-			(xy 219.71 45.72) (xy 238.76 45.72)
+			(xy 187.96 102.87) (xy 200.66 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "76670df9-0ac2-4850-a13d-b37639b26df4")
+		(uuid "4b2fc7c2-e3cf-4f39-93d7-7f48bd562911")
 	)
 	(wire
 		(pts
-			(xy 167.64 33.02) (xy 167.64 34.29)
+			(xy 200.66 101.6) (xy 200.66 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "76de3c7a-d9d1-46f9-a7f7-a4e054bc54fa")
+		(uuid "4f8299d6-100d-42c2-af4c-31ab9427026f")
 	)
 	(wire
 		(pts
-			(xy 146.05 33.02) (xy 167.64 33.02)
+			(xy 100.33 55.88) (xy 110.49 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "77e51995-b127-49a7-8e87-98f34790a217")
+		(uuid "54616602-971a-44eb-a678-3b89a7612689")
 	)
 	(wire
 		(pts
-			(xy 264.16 35.56) (xy 264.16 33.02)
+			(xy 214.63 55.88) (xy 227.33 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "78826b99-c37e-4ed9-b601-3fdd47bb3872")
+		(uuid "5c6b78b4-eaa5-4502-a9e2-f75e6d877aab")
 	)
 	(wire
 		(pts
-			(xy 48.26 35.56) (xy 60.96 35.56)
+			(xy 175.26 111.76) (xy 175.26 110.49)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "82fa4ec3-5e5c-49b9-83af-ad1dad4f1ee1")
+		(uuid "635a26d6-e15f-42f6-b26a-1a95aa8a085d")
 	)
 	(wire
 		(pts
-			(xy 87.63 35.56) (xy 93.98 35.56)
+			(xy 100.33 74.93) (xy 100.33 77.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8c4b1456-f5c7-4381-9ceb-3a7ad7663a50")
+		(uuid "695bd323-9552-4009-af00-ed3faf31f7bb")
 	)
 	(wire
 		(pts
-			(xy 190.5 45.72) (xy 190.5 43.18)
+			(xy 227.33 55.88) (xy 227.33 59.69)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8c5cd8d1-c948-4c5a-99fb-335f4daf60b7")
+		(uuid "73197092-f0ca-4c0e-8a85-6b8308fc6f6f")
 	)
 	(wire
 		(pts
-			(xy 167.64 33.02) (xy 180.34 33.02)
+			(xy 148.59 55.88) (xy 161.29 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "917d855c-4a2e-4afd-b783-5c0a3a097254")
+		(uuid "77c4638f-8bf5-4765-b1c5-b9ca956c84b8")
 	)
 	(wire
 		(pts
-			(xy 146.05 90.17) (xy 170.18 90.17)
+			(xy 200.66 60.96) (xy 200.66 62.23)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "93f646c0-5e92-4d21-be07-bae560db60ac")
+		(uuid "787fd836-607f-4668-8f53-d48d0f41e7cd")
 	)
 	(wire
 		(pts
-			(xy 60.96 38.1) (xy 60.96 57.15)
+			(xy 227.33 67.31) (xy 227.33 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9de0ce80-1421-4c92-9940-79d9a5c0b2f7")
+		(uuid "7f1b19e0-06f8-4b87-a395-a063d3e45f48")
 	)
 	(wire
 		(pts
-			(xy 238.76 33.02) (xy 234.95 33.02)
+			(xy 214.63 55.88) (xy 214.63 60.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9ef50e5c-0d43-4b75-b195-c2af5bb61671")
+		(uuid "85cc1e97-db7a-4d31-8917-86d5e565d91d")
 	)
 	(wire
 		(pts
-			(xy 191.77 90.17) (xy 181.61 90.17)
+			(xy 171.45 60.96) (xy 168.91 60.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9fa2b0ca-49e9-4107-ba1f-04e5950d0a85")
+		(uuid "873ed1a6-76f8-4e2b-89a4-56625f3fccba")
 	)
 	(wire
 		(pts
-			(xy 93.98 35.56) (xy 93.98 38.1)
+			(xy 148.59 60.96) (xy 148.59 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a8235895-de07-4a85-b80f-f314094245aa")
+		(uuid "8f89cc6f-a60b-43af-a171-640b9171be40")
 	)
 	(wire
 		(pts
-			(xy 146.05 45.72) (xy 167.64 45.72)
+			(xy 240.03 54.61) (xy 240.03 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a9913d8e-8ceb-4f9f-aeb3-ca157698dbad")
+		(uuid "9e0973ad-8963-4226-96ba-4a741afbb0d4")
 	)
 	(wire
 		(pts
-			(xy 238.76 35.56) (xy 238.76 33.02)
+			(xy 143.51 110.49) (xy 156.21 110.49)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ac13e1ea-964a-4f34-9fc0-12cc2256c25f")
+		(uuid "a0155c96-a3b7-4a00-910b-4efc6f2095b2")
 	)
 	(wire
 		(pts
-			(xy 167.64 41.91) (xy 167.64 45.72)
+			(xy 175.26 110.49) (xy 187.96 110.49)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ae118806-4462-439a-9561-23de2dbc443a")
+		(uuid "a183b97b-e181-4093-8616-2ca932e8fef2")
 	)
 	(wire
 		(pts
-			(xy 191.77 86.36) (xy 191.77 90.17)
+			(xy 148.59 68.58) (xy 148.59 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "aed83345-17ed-4de0-b363-ab04b2641ca7")
+		(uuid "b12835db-0bcf-4e58-89b7-1191d058c016")
 	)
 	(wire
 		(pts
-			(xy 113.03 41.91) (xy 113.03 35.56)
+			(xy 100.33 63.5) (xy 100.33 66.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b01b20c9-fae0-4b8d-bcb9-a32408e77455")
+		(uuid "be8aeb9c-1975-45c5-b0f3-a4944ed1331c")
 	)
 	(wire
 		(pts
-			(xy 82.55 46.99) (xy 93.98 46.99)
+			(xy 100.33 66.04) (xy 100.33 67.31)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b2f782e0-7a65-45fd-855d-a0276af004e4")
+		(uuid "c58da582-ab66-44e5-bbc5-d8dc0af4613b")
 	)
 	(wire
 		(pts
-			(xy 238.76 43.18) (xy 238.76 45.72)
+			(xy 168.91 60.96) (xy 168.91 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b8babc15-e0e4-41a9-8d33-7cd30052b859")
+		(uuid "c7e5eef0-5e22-4e37-9840-7324e06b05b7")
 	)
 	(wire
 		(pts
-			(xy 71.12 35.56) (xy 77.47 35.56)
+			(xy 184.15 66.04) (xy 184.15 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cdf92dd8-0cc7-4432-80f3-c3befcc4c1b9")
+		(uuid "c7eb0774-922f-4d3c-a276-f201e8266c01")
 	)
 	(wire
 		(pts
-			(xy 181.61 86.36) (xy 181.61 90.17)
+			(xy 200.66 71.12) (xy 214.63 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ce05d9a5-e6e3-4d40-b5c4-4698eff56b50")
+		(uuid "cb3643e5-a486-437f-82cc-d94e47ce78d7")
 	)
 	(wire
 		(pts
-			(xy 146.05 34.29) (xy 146.05 33.02)
+			(xy 227.33 71.12) (xy 240.03 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d05246b0-3508-46cc-999b-2d38f7ad11a9")
+		(uuid "cc8aeedf-b2cb-4e0a-8d8b-8dddd56b43ea")
 	)
 	(wire
 		(pts
-			(xy 200.66 33.02) (xy 219.71 33.02)
+			(xy 196.85 60.96) (xy 200.66 60.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d6814365-73c3-4545-9373-43889b9f7806")
+		(uuid "d1c8ef18-25f2-44df-8e3e-486f06ce3eaf")
 	)
 	(wire
 		(pts
-			(xy 219.71 33.02) (xy 219.71 35.56)
+			(xy 161.29 55.88) (xy 161.29 60.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d6a7a32e-a644-4f86-94e3-70c5e57fcb0a")
+		(uuid "d72ef67b-8712-49ae-bbe7-82ca4df8af05")
 	)
 	(wire
 		(pts
-			(xy 238.76 33.02) (xy 264.16 33.02)
+			(xy 144.78 55.88) (xy 148.59 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "eb0c920e-a69d-4fa4-895d-5623c937dcf2")
+		(uuid "db2be768-3912-43bf-a7b2-fa2177eddf9a")
 	)
 	(wire
 		(pts
-			(xy 93.98 46.99) (xy 93.98 48.26)
+			(xy 156.21 102.87) (xy 167.64 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ebbd9333-ff93-48d4-b636-31e4dce5059d")
+		(uuid "e827ffea-c8ed-471c-83a9-04ce81403df5")
 	)
 	(wire
 		(pts
-			(xy 181.61 90.17) (xy 170.18 90.17)
+			(xy 44.45 54.61) (xy 44.45 77.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ed351ca6-60d1-4ada-968a-5a463f00fe3f")
+		(uuid "e9411502-2c54-4262-a174-df1689ab958d")
 	)
 	(wire
 		(pts
-			(xy 177.8 38.1) (xy 177.8 45.72)
+			(xy 69.85 55.88) (xy 83.82 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ef8e9bb0-d5fa-4965-a0d8-2a8d25d6cc41")
+		(uuid "ec3d70d8-9b72-4504-becd-7baa43d3109e")
 	)
 	(wire
 		(pts
-			(xy 180.34 38.1) (xy 177.8 38.1)
+			(xy 214.63 60.96) (xy 214.63 62.23)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f459551e-0ca3-4ff5-a49f-7918eeec255d")
+		(uuid "eddaf84e-b5b4-4255-817a-f25dc943fc1d")
 	)
 	(wire
 		(pts
-			(xy 146.05 86.36) (xy 146.05 90.17)
+			(xy 200.66 69.85) (xy 200.66 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f6c6444a-2c5d-4434-82de-f12cc9507175")
+		(uuid "ee295023-7c6a-48c9-b27c-d2582c0b8451")
 	)
 	(wire
 		(pts
-			(xy 264.16 45.72) (xy 264.16 43.18)
+			(xy 161.29 68.58) (xy 161.29 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "fb63091d-a309-41f3-bf5b-0cc0278e3ae7")
+		(uuid "f079688f-f0df-4633-9323-8168fd9ec531")
 	)
 	(wire
 		(pts
-			(xy 93.98 57.15) (xy 93.98 58.42)
+			(xy 227.33 55.88) (xy 240.03 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "fc1c3abd-e838-479c-bc59-ce1610f96784")
+		(uuid "f64e7bd4-b353-410a-a8fe-33e26d2eee05")
 	)
-	(symbol
-		(lib_id "Device:L")
-		(at 231.14 33.02 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "099cae50-7010-4aee-aab4-d205984da027")
-		(property "Reference" "L1"
-			(at 231.14 27.94 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
+	(wire
+		(pts
+			(xy 46.99 55.88) (xy 46.99 54.61)
 		)
-		(property "Value" "L"
-			(at 231.14 30.48 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
+		(stroke
+			(width 0)
+			(type default)
 		)
-		(property "Footprint" ""
-			(at 231.14 33.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 231.14 33.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Inductor"
-			(at 231.14 33.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "b82838d3-2cc6-479a-852e-5d90a083fbbe")
-		)
-		(pin "1"
-			(uuid "bc6e71da-336a-4458-910f-33131db1d92e")
-		)
-		(instances
-			(project "JUKEN10 Bridge"
-				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
-					(reference "L1")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "f7fc9a20-0838-4112-9841-def5697a9c85")
 	)
-	(symbol
-		(lib_id "Connector:Screw_Terminal_01x02")
-		(at 43.18 38.1 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "113e39e0-9d39-435a-adca-71d41be58b39")
-		(property "Reference" "J1"
-			(at 43.18 29.21 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Screw_Terminal_01x02"
-			(at 43.18 31.75 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 43.18 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 43.18 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 43.18 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "0875cf90-45ea-4c68-875b-28d823922ea2")
-		)
-		(pin "1"
-			(uuid "34ecd598-fd87-4137-8d92-fbe5c93e7a0b")
-		)
-		(instances
-			(project "JUKEN10 Bridge"
-				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
-					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:SS36")
-		(at 219.71 39.37 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "15027994-c56c-4e9c-a20b-e6560ba3cd66")
-		(property "Reference" "D2"
-			(at 222.25 37.7824 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SS36"
-			(at 222.25 40.3224 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SMA"
-			(at 215.265 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.vishay.com/docs/88751/ss32.pdf"
-			(at 219.71 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "60V 3A Schottky Diode, SMA"
-			(at 219.71 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "05e45353-7b37-4e0b-be65-61f29dbba25d")
-		)
-		(pin "2"
-			(uuid "5b25eaad-d091-4906-b376-4e4658251010")
-		)
-		(instances
-			(project "JUKEN10 Bridge"
-				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
-					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 146.05 76.2 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1753de68-dcd1-4601-a5e4-0e1c65c05840")
-		(property "Reference" "#PWR08"
-			(at 146.05 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+5V"
-			(at 146.05 71.12 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 146.05 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 146.05 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 146.05 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "939a094c-c869-4394-9a5a-60ea213ba32f")
-		)
-		(instances
-			(project "JUKEN10 Bridge"
-				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
-					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Regulator_Linear:LM1117MP-3.3")
-		(at 170.18 77.47 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "265a7897-074e-4c80-9665-74ec2e05662f")
-		(property "Reference" "U2"
-			(at 170.18 71.12 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LM1117MP-3.3"
-			(at 170.18 73.66 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
-			(at 170.18 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm1117.pdf"
-			(at 170.18 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "800mA Low-Dropout Linear Regulator, 3.3V fixed output, SOT-223"
-			(at 170.18 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "44fcd91d-224d-454f-8854-9b3a7073cc85")
-		)
-		(pin "1"
-			(uuid "cd7733fe-4853-477f-8237-0e641986ad5c")
-		)
-		(pin "2"
-			(uuid "c4b76ae1-feb1-43c6-8b6f-0a4220ce6cc1")
-		)
-		(instances
-			(project "JUKEN10 Bridge"
-				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
-					(reference "U2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:SMAJ16A")
-		(at 113.03 45.72 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "33669a13-f848-41e2-be24-2a1ac05855af")
-		(property "Reference" "D8"
-			(at 115.57 44.4499 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SMAJ16A"
-			(at 115.57 46.9899 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SMA"
-			(at 107.95 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=75e32973-b177-4ee3-a0ff-cedaf1abdb93&filename=smaj-datasheet"
-			(at 113.03 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "400W unidirectional Transient Voltage Suppressor, 16.0Vr, SMA(DO-214AC)"
-			(at 113.03 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e744de47-4077-4db9-927d-d13cfe1738b1")
-		)
-		(pin "2"
-			(uuid "5289cbe4-a37c-4c37-9e5f-d7e4efad1989")
-		)
-		(instances
-			(project "JUKEN10 Bridge"
-				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
-					(reference "D8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 205.74 38.1 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "355f3cb9-26ad-4ef5-bccf-8a2cd980c541")
-		(property "Reference" "#PWR07"
-			(at 205.74 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+5V"
-			(at 205.74 43.18 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 205.74 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 205.74 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 205.74 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2bba1ddc-ef3b-4b98-bf0f-562c1ea55bbf")
-		)
-		(instances
-			(project "JUKEN10 Bridge"
-				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
-					(reference "#PWR07")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "easyeda2kicad:IRFR5305_C5155388")
-		(at 82.55 38.1 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "36baafd8-f3d3-4043-9a2f-59ee5d3ec815")
-		(property "Reference" "Q6"
-			(at 82.55 28.448 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "IRFR5305"
-			(at 82.55 30.988 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "easyeda2kicad:TO-252-3_L6.6-W6.1-P4.58-LS10.1-BR-1"
-			(at 95.25 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C5155388.pdf"
-			(at 97.79 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 82.55 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Slkor(萨科微)"
-			(at 100.33 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "IRFR5305"
-			(at 102.87 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part" "C5155388"
-			(at 105.41 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "7bdc5a08-b5f8-476d-be93-b1006ee5f01b")
-		)
-		(pin "2"
-			(uuid "d6804428-feab-4d54-a74d-2cc19c32323a")
-		)
-		(pin "1"
-			(uuid "a0b0d11d-98f9-4a52-a349-89d556ce7721")
-		)
-		(instances
-			(project "JUKEN10 Bridge"
-				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
-					(reference "Q6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 264.16 33.02 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3d87b0dc-dfdc-402a-9f84-595a047b9aa5")
-		(property "Reference" "#PWR04"
-			(at 264.16 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+5V"
-			(at 264.16 27.94 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 264.16 33.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 264.16 33.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 264.16 33.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "83203095-72c5-4473-8f5b-39bb80d57568")
-		)
-		(instances
-			(project "JUKEN10 Bridge"
-				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
-					(reference "#PWR04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "easyeda2kicad:01550900M")
-		(at 66.04 35.56 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "44e9168d-a738-4d04-bbd6-aaf406c35391")
-		(property "Reference" "FH1"
-			(at 66.04 29.21 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "01550900M"
-			(at 66.04 31.75 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "easyeda2kicad:FUSE-SMD_L9.8-W5.0_01550900M"
-			(at 66.04 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Others_Littelfuse_01550900M_Littelfuse-01550900M_C108518.html"
-			(at 66.04 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 66.04 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Littelfuse(美国力特)"
-			(at 66.04 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "01550900M"
-			(at 66.04 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part" "C108518"
-			(at 66.04 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "d94296ce-f0bf-4443-a889-77829282dda8")
-		)
-		(pin "1"
-			(uuid "f99c8c1e-6a12-468a-b435-d090e8c85012")
-		)
-		(instances
-			(project "JUKEN10 Bridge"
-				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
-					(reference "FH1")
-					(unit 1)
-				)
-			)
-		)
+	(wire
+		(pts
+			(xy 168.91 71.12) (xy 184.15 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "feb9fa30-e55c-40ed-8b64-b1980900c6d5")
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 181.61 82.55 0)
+		(at 187.96 106.68 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4136,9 +3628,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "54e2e943-c449-4b7d-83a2-1964c4be102f")
+		(uuid "086aae1e-b55a-4819-9203-7a5d61c269b2")
 		(property "Reference" "C6"
-			(at 185.42 81.2799 0)
+			(at 191.77 105.4099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4148,8 +3640,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
-			(at 185.42 83.8199 0)
+		(property "Value" "4.7uF"
+			(at 191.77 107.9499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4159,8 +3651,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 182.5752 86.36 0)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+			(at 188.9252 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4171,7 +3663,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 82.55 0)
+			(at 187.96 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4182,7 +3674,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 181.61 82.55 0)
+			(at 187.96 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4192,11 +3684,33 @@
 				)
 			)
 		)
-		(pin "1"
-			(uuid "258745e6-41da-4f7a-a7ec-395b339ac6fc")
+		(property "Config" ""
+			(at 187.96 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" ""
+			(at 187.96 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
 		(pin "2"
-			(uuid "48f91aba-92d9-479a-a5cc-a3b39dc16965")
+			(uuid "03771271-9a71-4cbf-aed9-ce95f5d9578d")
+		)
+		(pin "1"
+			(uuid "af0bddec-797d-48fc-8892-48991c3f241e")
 		)
 		(instances
 			(project "JUKEN10 Bridge"
@@ -4208,512 +3722,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Regulator_Switching:XL1509-5.0")
-		(at 190.5 35.56 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "569e865a-fc16-45b2-809a-da006419ec11")
-		(property "Reference" "U1"
-			(at 190.5 25.4 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "XL1509-5.0"
-			(at 190.5 27.94 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-			(at 190.5 27.178 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1809050422_XLSEMI-XL1509-5-0E1_C61063.pdf"
-			(at 193.04 24.892 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Buck DC/DC Converter, 2A, 5V Output Voltage, 7-40V Input Voltage"
-			(at 190.5 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "7"
-			(uuid "30e42b5b-7d8c-47fc-a4b3-db7eba39e90a")
-		)
-		(pin "6"
-			(uuid "851948a4-e052-4071-91b1-9502866bcd7d")
-		)
-		(pin "3"
-			(uuid "cd41daaa-2fdb-4ce3-89aa-a3e3920ad521")
-		)
-		(pin "5"
-			(uuid "893c78fb-b967-4a82-9be4-e3da1edf2da5")
-		)
-		(pin "1"
-			(uuid "96013521-954a-45c5-b1d1-8167f2d82c00")
-		)
-		(pin "4"
-			(uuid "b8a41329-e1c2-4c47-a680-42ddba85a2e4")
-		)
-		(pin "2"
-			(uuid "d8d431b6-f988-4fdc-b934-2dcf2ab6aa3d")
-		)
-		(pin "8"
-			(uuid "54b92994-81ac-4890-a84a-79d350ab0108")
-		)
-		(instances
-			(project "JUKEN10 Bridge"
-				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
-					(reference "U1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 167.64 38.1 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "730e051d-440a-467d-a4af-233f1084e00c")
-		(property "Reference" "C7"
-			(at 171.45 36.8299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "C"
-			(at 171.45 39.3699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 168.6052 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 167.64 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 167.64 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6c4dda20-3b81-44f7-9949-8bad80923f3d")
-		)
-		(pin "2"
-			(uuid "9ed8a22d-df8f-43d7-b345-a500208241db")
-		)
-		(instances
-			(project "JUKEN10 Bridge"
-				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
-					(reference "C7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 264.16 39.37 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "825daebd-ba32-4ed7-8315-9f36da8bce51")
-		(property "Reference" "C3"
-			(at 267.97 38.0999 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "C"
-			(at 267.97 40.6399 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 265.1252 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 264.16 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 264.16 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7e8c1c9a-b9cb-4de5-8749-6d8343e32e46")
-		)
-		(pin "2"
-			(uuid "25e985f9-4837-4063-b102-92792551ae37")
-		)
-		(instances
-			(project "JUKEN10 Bridge"
-				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
-					(reference "C3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Polarized_US")
-		(at 238.76 39.37 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9468b032-ea8e-4549-90fc-60493bd73090")
-		(property "Reference" "C2"
-			(at 242.57 37.4649 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "C_Polarized_US"
-			(at 242.57 40.0049 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 238.76 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 238.76 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Polarized capacitor, US symbol"
-			(at 238.76 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "c9e0817b-80b8-4335-a07b-64bd1c4c66f3")
-		)
-		(pin "1"
-			(uuid "45915028-3673-4c0a-b2c9-af5236c693a1")
-		)
-		(instances
-			(project "JUKEN10 Bridge"
-				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
-					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 191.77 77.47 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9818c430-295a-4ca9-8600-d216aafa233f")
-		(property "Reference" "#PWR09"
-			(at 191.77 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 191.77 72.39 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 191.77 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 191.77 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 191.77 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3b68745d-9c3b-408a-a528-d75430d33062")
-		)
-		(instances
-			(project "JUKEN10 Bridge"
-				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
-					(reference "#PWR09")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:BZV55B12")
-		(at 93.98 41.91 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a048c079-73cd-4001-ac34-73d31e962682")
-		(property "Reference" "D9"
-			(at 96.52 40.6399 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BZV55B12"
-			(at 96.52 43.1799 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_MiniMELF"
-			(at 89.535 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BZV55_SER.pdf"
-			(at 93.98 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "12V, 500mW, 2%, Zener diode, MiniMELF"
-			(at 93.98 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f093b868-dd58-4df6-8472-5cfcbad0e65d")
-		)
-		(pin "2"
-			(uuid "cb812d6f-47dd-4c5a-9693-af26d2a326d6")
-		)
-		(instances
-			(project "JUKEN10 Bridge"
-				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
-					(reference "D9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
-		(at 190.5 49.53 0)
+		(at 100.33 81.28 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4722,329 +3732,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "a67cd5a9-cd2e-459e-b9a3-99790ea8d355")
-		(property "Reference" "#PWR05"
-			(at 190.5 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 190.5 54.61 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 190.5 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 190.5 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 190.5 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3e6413da-3aa2-41db-9abe-98a4c43e65bf")
-		)
-		(instances
-			(project "JUKEN10 Bridge"
-				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
-					(reference "#PWR05")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 264.16 45.72 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ac70fb27-afba-43fc-aa85-2ddb97fd23aa")
-		(property "Reference" "#PWR06"
-			(at 264.16 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 264.16 50.8 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 264.16 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 264.16 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 264.16 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "42adb141-0dcf-440a-837c-c77011560ca2")
-		)
-		(instances
-			(project "JUKEN10 Bridge"
-				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
-					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Polarized_US")
-		(at 191.77 82.55 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c4f8bbc6-2a0e-41a4-a36e-f29aac3b9bce")
-		(property "Reference" "C5"
-			(at 195.58 80.6449 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "C_Polarized_US"
-			(at 195.58 83.1849 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 191.77 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 191.77 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Polarized capacitor, US symbol"
-			(at 191.77 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "f4221524-7226-47bc-8ed7-1da9b2e72464")
-		)
-		(pin "1"
-			(uuid "57ab1245-4dc5-477d-bbb4-05b4d227799e")
-		)
-		(instances
-			(project "JUKEN10 Bridge"
-				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
-					(reference "C5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Polarized_US")
-		(at 146.05 82.55 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cf6920bb-aafe-4457-9ac8-05560eb0cd85")
-		(property "Reference" "C4"
-			(at 149.86 80.6449 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "C_Polarized_US"
-			(at 149.86 83.1849 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 146.05 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 146.05 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Polarized capacitor, US symbol"
-			(at 146.05 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "c87e5767-fc1b-472c-84fd-34b37ce22143")
-		)
-		(pin "1"
-			(uuid "25e7a77d-bfd9-44fc-b89a-5da4cc75818c")
-		)
-		(instances
-			(project "JUKEN10 Bridge"
-				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
-					(reference "C4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 170.18 90.17 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d0910a1a-503a-4d21-88f0-6158e9ef2391")
+		(uuid "09cfb53f-0d75-4470-8471-1e09b7ba9845")
 		(property "Reference" "#PWR010"
-			(at 170.18 96.52 0)
+			(at 100.33 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5055,7 +3745,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 170.18 95.25 0)
+			(at 100.33 86.36 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5065,7 +3755,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 170.18 90.17 0)
+			(at 100.33 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5076,7 +3766,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 170.18 90.17 0)
+			(at 100.33 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5087,7 +3777,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 170.18 90.17 0)
+			(at 100.33 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5098,7 +3788,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "021b5253-513e-47fd-87d2-797a5294bdba")
+			(uuid "264cce70-d4f7-47ae-b8e9-18268495f90a")
 		)
 		(instances
 			(project "JUKEN10 Bridge"
@@ -5110,8 +3800,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 93.98 52.07 180)
+		(lib_id "Device:D_Schottky")
+		(at 200.66 66.04 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5119,32 +3809,29 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e46cea93-5e8c-4f38-9ca7-f2fd839c8abf")
-		(property "Reference" "R1"
-			(at 91.44 53.3401 0)
+		(uuid "0dfa9834-59a0-4bb5-861e-3f6a15abc6a8")
+		(property "Reference" "D11"
+			(at 207.01 65.7225 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "100K"
-			(at 91.44 50.8001 0)
+		(property "Value" "SS34"
+			(at 204.47 65.7225 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_SparkFun-Resistor:R_0805_2012Metric"
-			(at 95.758 52.07 90)
+		(property "Footprint" "easyeda2kicad:SMA_L4.4-W2.8-LS5.4-R-RD"
+			(at 200.66 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5155,7 +3842,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 93.98 52.07 0)
+			(at 200.66 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5165,8 +3852,695 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 93.98 52.07 0)
+		(property "Description" "Schottky diode"
+			(at 200.66 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 200.66 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" ""
+			(at 200.66 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "b5ba99f6-96b1-437e-a42c-95597022b125")
+		)
+		(pin "1"
+			(uuid "1b4f9a11-81ec-4089-8f99-8df46c63ad8f")
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
+					(reference "D11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Regulator_Linear:AMS1117-3.3")
+		(at 175.26 102.87 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "23c733b0-c22b-4559-a3ff-ddac6303fdb9")
+		(property "Reference" "U2"
+			(at 175.26 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AMS1117-3.3"
+			(at 175.26 99.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+			(at 175.26 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.advanced-monolithic.com/pdf/ds1117.pdf"
+			(at 177.8 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"
+			(at 175.26 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 175.26 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" ""
+			(at 175.26 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "6de971cc-ca6a-4e10-949f-c1022f1fda3c")
+		)
+		(pin "2"
+			(uuid "408072a4-e2c8-4e28-ac62-f4c9257aa8e5")
+		)
+		(pin "1"
+			(uuid "e6d7c026-5ce9-41c8-8d38-723ec0d05370")
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "easyeda2kicad:IRFR5305_C5155388")
+		(at 88.9 58.42 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "36cda147-19da-4bd4-a7e8-19a19abfcb42")
+		(property "Reference" "Q1"
+			(at 88.9 48.768 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "IRFR5305"
+			(at 88.9 51.308 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "easyeda2kicad:TO-252-3_L6.6-W6.1-P4.58-LS10.1-BR-1"
+			(at 101.6 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C5155388.pdf"
+			(at 104.14 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 88.9 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Slkor(萨科微)"
+			(at 106.68 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "IRFR5305"
+			(at 109.22 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C5155388"
+			(at 111.76 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 88.9 58.42 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" ""
+			(at 88.9 58.42 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "419dffb3-03f6-426e-9573-86152b60f35d")
+		)
+		(pin "2"
+			(uuid "092d88a5-5189-427c-a8c9-9eab6b269c0a")
+		)
+		(pin "1"
+			(uuid "54475411-a5ba-4aa0-ae57-006b7cd3d5bd")
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 156.21 106.68 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "38371cf3-97c1-49e6-9b93-19b3fb9a1e7a")
+		(property "Reference" "C5"
+			(at 160.02 105.4099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1uF"
+			(at 160.02 107.9499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 157.1752 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.21 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 156.21 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 156.21 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" ""
+			(at 156.21 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "321490ca-ea6e-4c8d-b626-934567f2eb0e")
+		)
+		(pin "1"
+			(uuid "47eb8e51-70f0-476b-bd88-f8cd7ad4a1ea")
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
+					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "easyeda2kicad:01550900M")
+		(at 64.77 55.88 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3a3b8659-9d28-4bb8-8eea-baeca167f2ab")
+		(property "Reference" "FH2"
+			(at 64.77 49.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "01550900M"
+			(at 64.77 52.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "easyeda2kicad:FUSE-SMD_L9.8-W5.0_01550900M"
+			(at 64.77 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Others_Littelfuse_01550900M_Littelfuse-01550900M_C108518.html"
+			(at 64.77 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 64.77 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Littelfuse(美国力特)"
+			(at 64.77 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "01550900M"
+			(at 64.77 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C108518"
+			(at 64.77 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 64.77 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" ""
+			(at 64.77 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "6da0233a-5526-4e92-9dff-67366545924b")
+		)
+		(pin "1"
+			(uuid "492687b6-998a-4b14-966b-2cbad961e0e0")
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
+					(reference "FH2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x02_Socket")
+		(at 44.45 49.53 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4200f4b5-bf84-433d-83d5-f7f58210c668")
+		(property "Reference" "J4"
+			(at 44.704 45.212 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "12V Battery"
+			(at 40.894 47.498 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-3-2-5.08_1x02_P5.08mm_Horizontal"
+			(at 44.45 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 44.45 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 44.45 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 44.45 49.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" ""
+			(at 44.45 49.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "6cd4795b-e7a0-41ae-b082-feb18792baf1")
+		)
+		(pin "1"
+			(uuid "fe3f462e-c090-4271-9b1a-6899e858102e")
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
+					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 143.51 101.6 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "50f0b3eb-26db-49bc-965c-60848a5694b5")
+		(property "Reference" "#PWR08"
+			(at 143.51 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 141.478 95.758 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 143.51 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 143.51 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 143.51 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5177,23 +4551,123 @@
 			)
 		)
 		(pin "1"
-			(uuid "33853fe9-f013-499f-befe-951a5b4018d8")
-		)
-		(pin "2"
-			(uuid "3ebc275d-9eea-46ca-8e47-318b67aa2d25")
+			(uuid "a104aa52-0871-4c22-8cb0-6f727c5926ed")
 		)
 		(instances
 			(project "JUKEN10 Bridge"
 				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
-					(reference "R1")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 93.98 58.42 0)
+		(lib_id "Device:C")
+		(at 143.51 106.68 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "59831dd8-0086-41bf-9c83-555c5ceabcd0")
+		(property "Reference" "C4"
+			(at 147.32 105.4099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4.7uF"
+			(at 147.32 107.9499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+			(at 144.4752 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 143.51 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 143.51 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 143.51 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" ""
+			(at 143.51 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "88862cab-671b-4066-b76b-92105fc0ec60")
+		)
+		(pin "2"
+			(uuid "a17cf8b9-7275-428d-a2e3-dcb5d3d5f58c")
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 200.66 101.6 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5202,9 +4676,303 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "fe3e9cb0-901f-480f-afa3-032f898fe256")
-		(property "Reference" "#PWR011"
-			(at 93.98 64.77 0)
+		(uuid "5f181c87-c6c0-4ac8-ac9b-51eb9fc1ce88")
+		(property "Reference" "#PWR061"
+			(at 200.66 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 200.66 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 200.66 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 200.66 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 200.66 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "702dfdc2-213f-4e1e-9e8c-749d3a420d7c")
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
+					(reference "#PWR061")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_TVS")
+		(at 227.33 63.5 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6950c99a-dddc-4c30-96a1-b3b8a282eacf")
+		(property "Reference" "D12"
+			(at 229.87 62.2299 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "D_TVS"
+			(at 229.87 64.262 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 227.33 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 227.33 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Bidirectional transient-voltage-suppression diode"
+			(at 227.33 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 227.33 63.5 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" ""
+			(at 227.33 63.5 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fb3590a9-a7f9-41a4-83a6-f1307cd6e55c")
+		)
+		(pin "2"
+			(uuid "7ef4acb8-ff6c-4039-be4b-71f17ca813bf")
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
+					(reference "D12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Regulator_Switching:LM2596S-5")
+		(at 184.15 58.42 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9023c196-25aa-420d-ac45-d1ec34da1d3a")
+		(property "Reference" "U9"
+			(at 184.15 48.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LM2596S-5"
+			(at 184.15 50.8 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-5_TabPin3"
+			(at 185.42 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2596.pdf"
+			(at 184.15 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "5V 3A Step-Down Voltage Regulator, TO-263"
+			(at 184.15 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 184.15 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" ""
+			(at 184.15 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "7f56318b-2f27-4727-b563-96368af6c607")
+		)
+		(pin "5"
+			(uuid "f6d9cc86-6d6d-4dcd-b095-0be55d363012")
+		)
+		(pin "4"
+			(uuid "33ee822f-5ef8-4c24-86e3-0ee4e81a4c46")
+		)
+		(pin "2"
+			(uuid "6b3a86b3-571e-4abc-9f6b-cdc88c6e9f2b")
+		)
+		(pin "1"
+			(uuid "0486bb29-1921-439a-8171-84fae17784c6")
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
+					(reference "U9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 175.26 111.76 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9802ee1a-ec81-4f73-9afe-331b653589e9")
+		(property "Reference" "#PWR09"
+			(at 175.26 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5215,7 +4983,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 93.98 63.5 0)
+			(at 175.26 116.84 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5225,7 +4993,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 93.98 58.42 0)
+			(at 175.26 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5236,7 +5004,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 93.98 58.42 0)
+			(at 175.26 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5247,7 +5015,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 93.98 58.42 0)
+			(at 175.26 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5258,20 +5026,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "b2ad0316-f9bf-4680-8e9c-ca0dca35d223")
+			(uuid "a248565f-c8cc-40f3-84a5-94662bc4c566")
 		)
 		(instances
 			(project "JUKEN10 Bridge"
 				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
-					(reference "#PWR011")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized_US")
-		(at 146.05 38.1 0)
+		(lib_id "Device:C")
+		(at 161.29 64.77 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5280,9 +5048,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "ff58a733-ef78-4661-9e36-0d905d0826c3")
-		(property "Reference" "C1"
-			(at 149.86 36.1949 0)
+		(uuid "9b947f13-5c19-47b2-aca6-a6e3d855a919")
+		(property "Reference" "C30"
+			(at 165.1 63.4999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5292,8 +5060,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C_Polarized_US"
-			(at 149.86 38.7349 0)
+		(property "Value" "1uF"
+			(at 165.1 66.0399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5303,8 +5071,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 146.05 38.1 0)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 162.2552 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5315,7 +5083,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 146.05 38.1 0)
+			(at 161.29 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5325,8 +5093,236 @@
 				)
 			)
 		)
-		(property "Description" "Polarized capacitor, US symbol"
-			(at 146.05 38.1 0)
+		(property "Description" "Unpolarized capacitor"
+			(at 161.29 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 161.29 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" ""
+			(at 161.29 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "23354917-e5fc-4ec1-a89f-82068e464342")
+		)
+		(pin "2"
+			(uuid "e21cb1ab-4341-4ca7-9ef3-ae2908cdefa1")
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
+					(reference "C30")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 207.01 60.96 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9bd04d4d-9c1a-4c56-b81c-b2d9604d3c77")
+		(property "Reference" "L3"
+			(at 207.01 55.88 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33uH"
+			(at 207.01 58.42 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "DR74-330-R:INDM7676X435N"
+			(at 207.01 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 207.01 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Inductor"
+			(at 207.01 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 207.01 60.96 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" ""
+			(at 207.01 60.96 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b6a7b188-3764-4b16-a95a-46ed10ac852f")
+		)
+		(pin "2"
+			(uuid "137f4619-3512-471d-a848-ecf1cc1fbb4c")
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
+					(reference "L3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 148.59 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a11a2826-3ba7-4ad8-90d3-7d85e0449584")
+		(property "Reference" "C29"
+			(at 152.4 62.6109 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "220uF"
+			(at 152.4 65.1509 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:CP_Elec_8x10.5"
+			(at 149.5552 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C72480.html"
+			(at 148.59 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 148.59 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 148.59 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" ""
+			(at 148.59 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5337,15 +5333,963 @@
 			)
 		)
 		(pin "2"
-			(uuid "747023ad-3065-4606-8968-2e8600d785df")
+			(uuid "f5107e54-a553-45da-90dd-9f916d1bad3a")
 		)
 		(pin "1"
-			(uuid "4980708c-77b8-462c-a1a4-5ac3bc05077e")
+			(uuid "aeb14226-2ad9-4d9c-be14-c9782112476a")
 		)
 		(instances
 			(project "JUKEN10 Bridge"
 				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
-					(reference "C1")
+					(reference "C29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 100.33 71.12 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b324d5ab-9f18-4fc8-9be4-943c1404876d")
+		(property "Reference" "R20"
+			(at 97.79 72.3901 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100K"
+			(at 97.79 69.8501 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 102.108 71.12 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 100.33 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 100.33 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 100.33 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" ""
+			(at 100.33 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fe9dbf84-32e3-4184-94b1-1bb889bfbff1")
+		)
+		(pin "2"
+			(uuid "a700cba1-bba4-4b09-a1cc-633bcc7e1580")
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
+					(reference "R20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+12V")
+		(at 144.78 55.88 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c06a6c60-f91b-4044-b142-1bdfe17294c8")
+		(property "Reference" "#PWR05"
+			(at 148.59 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+12V"
+			(at 140.97 55.8799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 144.78 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 144.78 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 144.78 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3cab0d02-8d3d-4efc-8f55-e4e2e10c9653")
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 200.66 106.68 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c685c3be-363b-4961-ac15-fa677ca5c0ac")
+		(property "Reference" "C28"
+			(at 204.47 105.4099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1uF"
+			(at 204.47 107.9499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 201.6252 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 200.66 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 200.66 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 200.66 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" ""
+			(at 200.66 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bb2dd441-726a-4e23-9ba4-be407b1adda2")
+		)
+		(pin "2"
+			(uuid "c5066203-b665-4e26-8a2d-fcc800da9436")
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
+					(reference "C28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 240.03 54.61 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cdc306e5-99b4-4065-a8f8-1301b1d38aa9")
+		(property "Reference" "#PWR065"
+			(at 240.03 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 242.57 53.3399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 240.03 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 240.03 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 240.03 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "91a53b3b-1467-4b5b-b352-70d0926996e2")
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
+					(reference "#PWR065")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+12V")
+		(at 110.49 55.88 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "da9ac225-8835-4be8-b52f-837e6b2d190b")
+		(property "Reference" "#PWR04"
+			(at 106.68 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+12V"
+			(at 114.3 55.8799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 110.49 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110.49 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 110.49 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a5b667cc-4561-47fa-a865-faccfc055d24")
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 214.63 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e206cb7e-c97a-4d58-b71b-7d6c619fe332")
+		(property "Reference" "C31"
+			(at 218.44 63.8809 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "220uF"
+			(at 218.44 66.4209 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:CP_Elec_8x10.5"
+			(at 215.5952 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C72480.html"
+			(at 214.63 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 214.63 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 214.63 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" ""
+			(at 214.63 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "f7ec6441-0d90-4502-9cfc-af8f7a7f058e")
+		)
+		(pin "1"
+			(uuid "b78f74ab-2f0a-4811-9990-67a83649af55")
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
+					(reference "C31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_SparkFun-LED:LED_Blue_0603")
+		(at 240.03 68.58 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e2771919-8f73-4e26-91d6-5f2cd30548a0")
+		(property "Reference" "D13"
+			(at 242.57 68.072 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Blue"
+			(at 242.57 70.612 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+			(at 245.11 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://media.digikey.com/pdf/Data%20Sheets/Rohm%20PDFs/SMLE12_Series_Rev2.0_2007.pdf"
+			(at 250.19 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 252.73 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PROD_ID" "DIO-08575"
+			(at 247.65 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 240.03 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" ""
+			(at 240.03 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c29266d2-4ec1-4ba8-9e64-4b377145a0ab")
+		)
+		(pin "2"
+			(uuid "8c2ab59e-c771-4445-9530-9de0cdd09486")
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
+					(reference "D13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:BZV55B12")
+		(at 100.33 59.69 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e5dd640a-d21c-4665-b8f6-8abc6e2e642e")
+		(property "Reference" "D10"
+			(at 102.87 58.4199 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BZV55B12"
+			(at 102.87 60.9599 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_MiniMELF"
+			(at 95.885 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BZV55_SER.pdf"
+			(at 100.33 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "12V, 500mW, 2%, Zener diode, MiniMELF"
+			(at 100.33 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 100.33 59.69 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" ""
+			(at 100.33 59.69 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6f0aaf2b-eb21-4000-9e5a-8485027ebb94")
+		)
+		(pin "2"
+			(uuid "c5b7a93b-335c-490a-b620-5b63eb864094")
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
+					(reference "D10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 240.03 60.96 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ec254ae0-e49c-4151-a715-50896fe78f6d")
+		(property "Reference" "R21"
+			(at 246.634 61.976 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "2.2K"
+			(at 246.634 59.436 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 238.252 60.96 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 240.03 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 240.03 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Config" ""
+			(at 240.03 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" ""
+			(at 240.03 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "acedf1a8-f858-4470-9e99-68c54e0a47fd")
+		)
+		(pin "1"
+			(uuid "862982c6-9701-4e45-9af9-14dcca6ce4e3")
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
+					(reference "R21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 184.15 72.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "eee7b8e8-fb5e-4593-a98d-b3cc6808f977")
+		(property "Reference" "#PWR064"
+			(at 184.15 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 184.15 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 184.15 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 184.15 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 184.15 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3c99174a-dbfb-43fc-9f6f-e7445195db2b")
+		)
+		(instances
+			(project "JUKEN10 Bridge"
+				(path "/ea62e1f2-9d9d-4f2f-ae78-f48dee6a9355/4dd74dca-1a0e-4a69-be0c-6e0544fab938"
+					(reference "#PWR064")
 					(unit 1)
 				)
 			)
