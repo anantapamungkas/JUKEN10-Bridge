@@ -21,7 +21,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "2581acb7-abf9-4f6d-9126-9e394a55ab2d")
-		(property "Sheetname" "Section C - Throtle"
+		(property "Sheetname" "Section C - C02"
 			(at 59.69 77.3934 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -67,7 +67,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "2b6d34ad-9d7a-4f29-bcfb-11e28d3b2081")
-		(property "Sheetname" "Section B - MCU"
+		(property "Sheetname" "Section B - CORE"
 			(at 60.325 56.4384 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -159,7 +159,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "7fd5b227-1927-4732-baee-569f45f05db1")
-		(property "Sheetname" "Section F - Low Current Output"
+		(property "Sheetname" "Section F - C05"
 			(at 57.785 127.5584 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -205,7 +205,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "b143307d-08da-4bba-b86c-992dd1aecb7c")
-		(property "Sheetname" "Section D - Input"
+		(property "Sheetname" "Section D - C03"
 			(at 59.69 94.5384 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -251,7 +251,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "c400f111-7d7e-4d8a-9fbe-f29b0eec18a8")
-		(property "Sheetname" "Section E - Analog Input"
+		(property "Sheetname" "Section E - C04"
 			(at 59.055 114.2234 0)
 			(show_name no)
 			(do_not_autoplace no)
